@@ -21,11 +21,15 @@ public class Queue {
         dataArray = null;
     }
     public void printQueue(){
-        System.out.print("[");
-        for(int i=dataArray.length-1; i>=0; i--){
-            System.out.print(dataArray[i]+", ");
+        if(isEmpty()){
+            System.err.println("Empty Queue");
+        }else {
+            System.out.print("[");
+            for (int i = dataArray.length - 1; i >= 0; i--) {
+                System.out.print(dataArray[i] + ", ");
+            }
+            System.out.println("\b\b]");
         }
-        System.out.println(isEmpty() ? "empty]":"\b\b]");
     }
     public boolean contains(int data){
         return false;
