@@ -43,12 +43,19 @@ public class Stack {
         dataArray = null;
     }
     public int peek(){
-        return isEmpty() ? -1 : dataArray[dataArray.length-1];
+        if(isEmpty()){
+            return 0;
+        }
+        return dataArray[dataArray.length-1];
     }
     public boolean contains(int data){
-        for (int i = 0; i < dataArray.length; i++) {
-            if(dataArray[i]==data){
-                return true;
+        if(isEmpty()){
+            return false;
+        }else{
+            for (int i = 0; i < dataArray.length; i++) {
+                if (dataArray[i] == data) {
+                    return true;
+                }
             }
         }
         return false;
