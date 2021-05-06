@@ -10,7 +10,7 @@ public class Demo {
         s1.pop();
         s1.pop();
         s1.printStack();
-        s1.clear();
-        s1.printStack();
+        int peek=s1.peek();
+        System.out.println(peek);
     }
 }

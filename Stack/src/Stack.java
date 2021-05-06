@@ -26,4 +26,7 @@ public class Stack {
     public void clear(){
         nextIndex=0;
     }
+    public int peek(){
+        return isEmpty() ? -1 : dataArray[nextIndex-1];
+    }
 }
