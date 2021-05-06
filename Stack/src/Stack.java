@@ -11,6 +11,13 @@ public class Stack {
         dataArray[nextIndex++]=data;
     }
     public void printStack(){
-        System.out.println(Arrays.toString(dataArray));
+        System.out.print("[");
+        for(int i=nextIndex-1; i>=0; i--){
+            System.out.print(dataArray[i]+", ");
+        }
+        System.out.println("\b\b]");
+    }
+    public void pop(){
+        nextIndex--;
     }
 }
