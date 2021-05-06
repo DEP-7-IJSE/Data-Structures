@@ -43,15 +43,27 @@ public class Queue {
         }
     }
     public boolean contains(int data){
+        if(isEmpty()){
+            return false;
+        }else{
+            for (int i = 0; i < dataArray.length; i++) {
+                if (dataArray[i] == data) {
+                    return true;
+                }
+            }
+        }
         return false;
     }
     public int peek(){
-        return 0;
+        if(isEmpty()){
+            return 0;
+        }
+        return dataArray[0];
     }
     public boolean isEmpty(){
         return dataArray==null;
     }
     public int size(){
-        return 0;
+        return isEmpty() ? 0 : dataArray.length;
     }
 }
