@@ -15,7 +15,18 @@ public class Queue {
         }
     }
     public void deQueue(){
-
+        if(isEmpty()){
+            System.err.println("[Can't deQueue from empty Array]");
+        }else if(dataArray.length==1){
+            dataArray = null;
+            return;
+        }else {
+            int temp[] = new int[dataArray.length - 1];
+            for (int i = 0; i < temp.length; i++) {
+                temp[i] = dataArray[i + 1];
+            }
+            dataArray = temp;
+        }
     }
     public void clear(){
         dataArray = null;
