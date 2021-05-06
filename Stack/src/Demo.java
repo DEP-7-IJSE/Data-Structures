@@ -12,5 +12,6 @@ public class Demo {
         s1.printStack();
         int peek=s1.peek();
         System.out.println(peek);
+        System.out.println(s1.contains(40));
     }
 }
