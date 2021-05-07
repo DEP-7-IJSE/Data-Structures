@@ -33,18 +33,22 @@ public class DynamicArray {
 
     }
     public void print(){
-
+        System.out.print("[");
+        for(int i=dataArray.length-1; i>=0; i--){
+            System.out.print(dataArray[i]+", ");
+        }
+        System.out.println(isEmpty() ? "empty]":"\b\b]");
     }
     public void clear(){
-
+        dataArray=null;
     }
     public int size(){
-        return 0;
+        return isEmpty() ? 0 : dataArray.length;
     }
     public boolean contains(int data){
         return false;
     }
     public boolean isEmpty(){
-        return false;
+        return dataArray==null;
     }
 }
