@@ -17,6 +17,11 @@ public class DynamicArray {
         }
     }
     public void add(int index,int data){
+        if(isEmpty()){
+            dataArray=new int[1];
+            dataArray[0]=data;
+        }
+        int[] temp = new int[dataArray.length+1];
 
     }
     public void remove(int index){
@@ -29,8 +34,13 @@ public class DynamicArray {
         }
         dataArray=temp;
     }
-    public void get(int index){
-
+    public int get(int index){
+        for (int i = 0; i < dataArray.length; i++) {
+            if(dataArray[i]==dataArray[index]){
+                return dataArray[i];
+            }
+        }
+        return -1;
     }
     public void print(){
         System.out.print("[");
@@ -46,6 +56,15 @@ public class DynamicArray {
         return isEmpty() ? 0 : dataArray.length;
     }
     public boolean contains(int data){
+        if(isEmpty()){
+            return false;
+        }else{
+            for (int i = 0; i < dataArray.length; i++) {
+                if (dataArray[i] == data) {
+                    return true;
+                }
+            }
+        }
         return false;
     }
     public boolean isEmpty(){
