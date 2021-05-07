@@ -31,6 +31,9 @@ public class DynamicArray {
     public void remove(int index){
         if(index >=size() || index<0){
             throw new RuntimeException("Invalid Index");
+        }else if(size()-1==0){
+            clear();
+            return;
         }else{
             int[] temp=new int[dataArray.length-1];
             for (int i = 0; i < index; i++) {
