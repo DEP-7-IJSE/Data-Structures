@@ -22,7 +22,14 @@ public class DynamicArray {
             dataArray[0]=data;
         }
         int[] temp = new int[dataArray.length+1];
-
+        for (int i = 0; i < index; i++) {
+            temp[i]=dataArray[i];
+        }
+        temp[index]=data;
+        for (int i = 0; i < temp.length; i++) {
+            temp[index+i]=dataArray[index+1+i];
+        }
+        dataArray=temp;
     }
     public void remove(int index){
         int[] temp=new int[dataArray.length-1];
