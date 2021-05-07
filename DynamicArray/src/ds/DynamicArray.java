@@ -20,24 +20,25 @@ public class DynamicArray {
         if(isEmpty()){
             dataArray=new int[1];
             dataArray[0]=data;
+        }else{
+            int[] temp = new int[dataArray.length+1];
+            for (int i = 0; i < index; i++) {
+                temp[i]=dataArray[i];
+            }
+            temp[index]=data;
+            for (int i = index+1; i < temp.length; i++) {
+                temp[i]=dataArray[i-1];
+            }
+            dataArray=temp;
         }
-        int[] temp = new int[dataArray.length+1];
-        for (int i = 0; i < index; i++) {
-            temp[i]=dataArray[i];
-        }
-        temp[index]=data;
-        for (int i = 0; i < temp.length; i++) {
-            temp[index+i]=dataArray[index+1+i];
-        }
-        dataArray=temp;
     }
     public void remove(int index){
         int[] temp=new int[dataArray.length-1];
         for (int i = 0; i < index; i++) {
             temp[i]=dataArray[i];
         }
-        for (int i = 0; i < temp.length; i++) {
-            temp[index+i]=dataArray[index+i+1];
+        for (int i = index; i < temp.length; i++) {
+            temp[i]=dataArray[i+1];
         }
         dataArray=temp;
     }
