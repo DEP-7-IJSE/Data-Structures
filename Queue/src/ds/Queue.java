@@ -1,3 +1,5 @@
+package ds;
+
 public class Queue {
     private int[] dataArray;
 
@@ -33,7 +35,7 @@ public class Queue {
     }
     public void printQueue(){
         if(isEmpty()){
-            System.err.println("Empty Queue");
+            System.err.println("Empty ds.Queue");
         }else {
             System.out.print("[");
             for (int i = dataArray.length - 1; i >= 0; i--) {
@@ -56,7 +58,7 @@ public class Queue {
     }
     public int peek(){
         if(isEmpty()){
-            throw new RuntimeException("Queue is empty");
+            throw new RuntimeException("ds.Queue is empty");
         }
         return dataArray[dataArray.length-1];
     }

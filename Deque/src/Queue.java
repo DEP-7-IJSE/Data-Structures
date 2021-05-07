@@ -1,5 +1,5 @@
 public class Queue {
-    int[] dataArray;
+    protected int[] dataArray;
 
     public void enQueue(int data){
         if(isEmpty()){

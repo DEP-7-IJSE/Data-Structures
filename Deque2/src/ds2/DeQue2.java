@@ -1,6 +1,8 @@
+package ds2;
 
+import ds.Queue;
 
-public class DeQue extends Queue {
+public class DeQue2 extends Queue {
     public void enQueueRear(int data){
         if(isEmpty()){
             dataArray=new int[1];
