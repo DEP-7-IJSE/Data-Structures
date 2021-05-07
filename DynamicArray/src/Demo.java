@@ -14,5 +14,7 @@ public class Demo {
         d1.print();
         System.out.println(d1.get(2));
         System.out.println(d1.contains(30));
+        System.out.println(d1.contains(100));
+        System.out.println(d1.size());
     }
 }
