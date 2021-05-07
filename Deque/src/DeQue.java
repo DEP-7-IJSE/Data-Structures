@@ -14,6 +14,17 @@ public class DeQue extends Queue{
     }
 
     public void deQueueFront(){
-
+        if(isEmpty()){
+            System.err.println("[Can't deQueue from empty Array]");
+        }else if(dataArray.length==1){
+            dataArray = null;
+            return;
+        }else {
+            int temp[] = new int[dataArray.length - 1];
+            for (int i = 0; i < temp.length; i++) {
+                temp[i] = dataArray[i];
+            }
+            dataArray = temp;
+        }
     }
 }
