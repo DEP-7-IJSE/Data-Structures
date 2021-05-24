@@ -12,6 +12,8 @@ public class EncryptionFormController {
         int ascii=0;
         for (int i = 0; i < entered.length(); i++) {
             char c = entered.charAt(i);
+            ascii+= (int) c;
         }
+        txtEncrypted.setText(String.valueOf(ascii));
     }
 }
